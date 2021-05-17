@@ -17,3 +17,8 @@ class TestConversorRomanoDecimal():
 		romano = Roman2Decimal()
 		numero = romano.converte('II')
 		assert numero == 2
+
+	def test_entender_quatro_simbolos_como_XXII(self):
+		romano = Roman2Decimal()
+		numero = romano.converte('XXII')
+		assert numero == 22
