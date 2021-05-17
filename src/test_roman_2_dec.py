@@ -12,3 +12,8 @@ class TestConversorRomanoDecimal():
 		romano = Roman2Decimal()
 		numero = romano.converte('V')
 		assert numero == 5
+
+	def test_entender_dois_simbolos_como_II(self):
+		romano = Roman2Decimal()
+		numero = romano.converte('II')
+		assert numero == 2
