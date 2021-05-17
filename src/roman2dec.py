@@ -1,8 +1,5 @@
 class Roman2Decimal:
+	table = {'I':1,'V': 5,'X':10,'L':50,'C':100,'D':500,'M':1000}
+
 	def converte(self,roman):
-		if roman == 'I':
-			return 1
-		elif roman == 'V':
-			return 5
-		else:
-			return 0
+		return table.get(roman)
