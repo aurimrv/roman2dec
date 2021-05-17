@@ -1,3 +1,3 @@
 class Roman2Decimal:
 	def converte(self,roman):
-		pass
+		return 1
