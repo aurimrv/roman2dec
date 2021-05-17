@@ -22,3 +22,8 @@ class TestConversorRomanoDecimal():
 		romano = Roman2Decimal()
 		numero = romano.converte('XXII')
 		assert numero == 22
+
+	def test_entender_numeros_como_IX(self):
+		romano = Roman2Decimal()
+		numero = romano.converte('IX')
+		assert numero == 9
