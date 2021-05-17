@@ -3,7 +3,17 @@ class Roman2Decimal:
 
 	def converte(self,roman):
 		sumup = 0
-		for symbol in roman:
-			sumup = sumup + self.table.get(symbol)
+		last_left_number = 0
+		# Invert string and process
+		for symbol in roman[::-1]:
+			current = self.table.get(symbol)
+
+			mult = 1
+			if current < last_left_number:
+				mult = -1
+
+			sumup = sumup + (mult * current)
+
+			last_left_number = current
 
 		return sumup
